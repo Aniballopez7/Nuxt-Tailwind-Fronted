@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .btn{
+    @apply bg-grey-700 w-full py-3 rounded-lg text-center
+  }
+}
+
+@layer utilities {
+  .ease {
+      @apply transition duration-300 ease-in-out;
+  }
+}

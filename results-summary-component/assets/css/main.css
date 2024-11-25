@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .bg-gradient{
+    background: rgb(46,43,233);
+    background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 100%);
+  }
+  .circle-gradient{
+    background: rgba(120,87,255,1);
+    background: linear-gradient(0deg, rgba(120,87,255,1) 0%, rgba(46,43,233,1) 100%);
+    clip-path: circle(50% at 50% 50%);
+  }
+  .summary{
+    @apply w-full flex justify-between p-3 font-semibold;
+    &.red{
+      @apply bg-[#FFF6F5];
+    }
+    &.blue{
+      @apply bg-[#F3F3FD];
+    }
+    &.green{
+      @apply bg-[#F2FAFA];
+    }
+    &.yellow{
+      @apply bg-[#FFFBF2];
+    }
+  }
+}

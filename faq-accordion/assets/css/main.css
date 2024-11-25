@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .background-mobile {
+    @apply absolute top-0 left-0 w-full h-[30%] bg-center bg-no-repeat bg-cover z-0;
+    background-image: url('/assets/images/background-pattern-mobile.svg');
+  }
+  
+  .background-desktop {
+    @apply absolute top-0 left-0 w-full h-[30%] bg-center bg-no-repeat bg-cover z-0;
+    background-image: url('/assets/images/background-pattern-desktop.svg');
+  }
+
+  .article{
+    @apply py-5 border-b border-[#ebebeb];
+
+    &.article-last{
+      @apply border-b-0;
+    }
+    div{
+      @apply w-full flex items-center justify-between gap-5;
+      h2{
+        @apply font-bold leading-none tracking-wide;
+      }
+      span{
+        @apply flex justify-center items-center bg-[#A031D8] w-6 h-6 rounded-full  text-white cursor-pointer ;
+        &:hover{
+          @apply ease bg-dark-purple;
+        }
+      }
+    }
+    .parraf{
+      @apply text-[#a19898] leading-relaxed py-5 text-sm lg:text-base;
+
+      &.parraf-last{
+        @apply pb-0 pt-5;
+      }
+    }
+  }
+}
+
+@layer utilities{
+  .ease{
+    @apply transition duration-300 ease-in-out;
+  }
+}

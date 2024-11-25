@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  .div-content {
+    @apply bg-card 
+      grid
+      rounded-lg
+      
+      /* Mobile layout */
+      grid-rows-[0.65fr_1fr]
+      
+      /* Desktop layout */
+      lg:grid-cols-2
+      lg:grid-rows-1
+      lg:max-w-[80%]
+      lg:h-[500px];
+  }
+  .div-img {
+    @apply grid
+      row-start-1
+      bg-mobile
+      bg-cover
+      rounded-t-lg
+      relative
+      
+      /* Overlay */
+      before:absolute
+      before:inset-0
+      before:bg-accent/65
+      before:rounded-t-lg
+      
+      /* Desktop styles */
+      lg:col-start-2
+      lg:bg-desktop
+      lg:rounded-r-lg
+      lg:rounded-l-none
+      lg:before:rounded-r-lg
+      lg:before:rounded-l-none;
+  }
+  .div-span{
+    @apply flex flex-col gap-2.5 items-center lg:items-start;
+
+    .number{
+      @apply font-bold text-3xl;
+    }
+
+    .text{
+      @apply uppercase text-white-paragraph tracking-widest;
+    }
+  }
+}

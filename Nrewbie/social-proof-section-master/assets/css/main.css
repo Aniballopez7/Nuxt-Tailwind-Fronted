@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  .div-start{
+    @apply  flex flex-col py-4 px-10 justify-start items-center rounded-lg bg-neutral-light-magenta text-lg gap-2 lg:gap-5 lg:flex-row lg:w-[480px]; 
+    figure{
+      @apply flex gap-3;
+      img{
+        @apply w-4 h-4;
+      }
+    }
+    p{
+      @apply font-bold text-primary-magenta;
+    }
+  }
+  .div-person{
+    @apply flex flex-col bg-primary-magenta p-10 gap-5 rounded-lg lg:h-[240px];
+    .profile{
+      @apply flex gap-5;
+      figure{
+        @apply flex gap-3;
+        img{
+          @apply w-12 h-12 rounded-full;
+        }
+      }
+      div{
+        h3{
+          @apply font-semibold;
+        }
+        span{
+          @apply text-primary-pink;
+        }
+      }
+    }
+  }
+}
+.font-league-spartan{
+  font-family: 'League Spartan', sans-serif;
+}

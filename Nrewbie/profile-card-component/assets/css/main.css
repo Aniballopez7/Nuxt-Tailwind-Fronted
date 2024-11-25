@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  .bg{
+    @apply absolute top-0 left-0 w-full bg-cover -z-0 ;
+    background-image: url('/assets/images/bg-pattern-card.svg');
+  }
+  .div-span{
+    @apply flex flex-col items-center text-dark-desaturated;
+  
+    .number{
+      @apply font-bold text-2xl;
+    }
+  
+    .text{
+      @apply  tracking-[0.2em];
+    }
+  }
+}
+
+.font-kumbh-sabs{
+  font-family: 'Kumbh Sans';
+}

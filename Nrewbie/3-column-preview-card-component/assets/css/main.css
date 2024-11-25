@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .cards {
+    @apply p-10 text-bgb flex flex-col gap-6 lg:justify-between;
+    .cards-container {
+      @apply flex flex-col gap-6;
+
+      p{
+        @apply text-base lg:text-sm
+      }
+
+    }
+    .title {
+      @apply text-4xl uppercase font-semibold font-big-shoulders-display;
+    }
+    button{
+      @apply bg-bgb rounded-full w-fit py-3 px-6 ease;
+
+      &.btn-primary {
+        @apply text-primary;
+      }
+      &.btn-secondary {
+        @apply text-secondary;
+      }
+      &.btn-terceary {
+        @apply text-terceary;
+      }
+      &:hover {
+        @apply bg-bgb/75;
+      }
+    }
+    
+  }
+}
+
+@layer utilities {
+  .ease{
+    @apply transition-colors duration-300 ease-in-out;
+  }
+}
+.font-big-shoulders-display {
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.font-lexend-deca {
+  font-family: "Lexend Deca", sans-serif;
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  h3{
+    @apply font-bold lg:text-lg;
+  }
+  .btn{
+    @apply bg-yellow py-2.5 w-full rounded-lg shadow-lg ease;
+    &:hover{
+      @apply bg-yellow/80;
+    }
+  }
+}
+
+.ease{
+  @apply duration-300 transition-all ease-in-out
+}
+
+.font-karla{
+  font-family: 'Karla', sans-serif;
+}

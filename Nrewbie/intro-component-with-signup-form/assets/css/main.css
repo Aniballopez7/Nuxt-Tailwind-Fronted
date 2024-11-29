@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  input{
+    @apply border-2 py-2.5 px-5 border-grayish-blue/50 rounded-lg outline-none ease focus:border-grayish-blue;
+  }
+  .btn{
+    @apply bg-green text-white py-2.5 px-10 rounded-lg ;
+    &:hover{
+      @apply bg-green/70 ease;
+    }
+  }
+}
+
+@layer utilities {
+  .ease{
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
